@@ -123,6 +123,15 @@
     }
   }
 
+ function checkEvacuation2() {
+    const input = document.getElementById('evacuationPlace2').value.trim();
+    if (!input) {
+      document.getElementById('evacuationWarning2').style.display = 'block';
+    } else {
+      alert("これで終了です。もしもの時は、今回確認したように動けるようにしておきましょう！");
+    }
+  }
+
   function checkSupplies1() {
     const food = document.getElementById("food1").checked;
     const water = document.getElementById("water1").checked;
@@ -235,7 +244,7 @@
 <div class="page" id="page3">
   <h1>河川の氾濫（外水氾濫）について</h1>
   <p>・上流で降った大雨により川があふれ、<span style="color:red;">下流でも浸水します</span>。<br>
-  ・今いる場所で雨が降っていなくても、<span style="color:red;">被害の可能性があります</span>。</p>
+  ・<span style="color:red;">今いる場所で雨が降っていなくても、被害の可能性があります</span>。</p>
 
   <p class="question">
     Q. あなたの家の近くに、<span style="color:red; font-weight:bold; text-decoration: underline;">大きな川や堤防</span>などはありますか？<br>
@@ -273,8 +282,8 @@
 
   <div class="input-block">
     <p>以下の備えはできていますか？</p>
-    <label><input type="checkbox" id="food5"> ３日分以上の食料（缶詰、レトルト食品、お菓子などでもよい）</label>
-    <label><input type="checkbox" id="water5"> 水（大人１人当たり１日３リットル）</label><br><br>
+    <label><input type="checkbox" id="food5"> <span style="font-weight:bold;">３日分以上の食料</span>（缶詰、レトルト食品、お菓子などでもよい）</label>
+    <label><input type="checkbox" id="water5"> <span style="font-weight:bold;">水</span>（大人１人当たり１日３リットル）</label><br><br>
     <button onclick="checkSupplies5()">確認</button>
     <p id="supplyResult5" style="margin-top:10px;"></p>
   </div>
@@ -292,7 +301,6 @@
   <h1>自宅の浸水想定について</h1>
   <div class="image-option">
     <p class="question">Q. あなたの家に想定されている浸水はどの程度ですか？</p> 
-    <img src="浸水凡例.png" width="7.5" height="550">
     <div class="choice">
      <button onclick="nextPage(6)">10m以上</button2>
      <button onclick="nextPage(19)">5m以上10m未満</button>
@@ -304,20 +312,20 @@
 </div>
 <div class="page" id="page8">
   <h1>避難方法について</h1>
-  <p>避難する際は、どこに逃げるかだけでなく、<span style="color:red;">いつ逃げるか</span>も重要です。</p>
+  <p>避難する際は、どこに逃げるかだけでなく、<span style="color:red; font-weight:bold;">いつ逃げるか</span>も重要です。</p>
 
   <ul>
-    <li><span style="color:red;">避難に時間がかかる人がいる</span>場合→<span class="btn-orange">高齢者等避難</span>が出たら避難</li><br>
-    <li><span style="color:red;">避難に時間がかかる人がいない</span>場合→<span class="btn-purple">避難指示</span>が出たら避難</li>
+    <li>避難に時間がかかる人が<span style="color:red; font-weight:bold;">いる</span>場合→<span class="btn-orange">高齢者等避難</span>が出たら避難</li><br>
+    <li>避難に時間がかかる人が<span style="color:red; font-weight:bold;">いない</span>場合→<span class="btn-purple">避難指示</span>が出たら避難</li>
   </ul>
 　<br>
   <p>では、どこに避難するか確認しましょう。（※基本的には徒歩避難）</p>
 
-  <div class="input-block">
-    <label for="evacuationPlace">具体的な避難先は？（浸水しない親せき・知人宅や指定避難所）</label><br>
-    <input type="text" id="evacuationPlace" placeholder="避難先を入力">
-    <button onclick="checkEvacuation()">確認した！</button>
-    <p id="evacuationWarning" style="color:red; display:none;">決めていなくても、今考えてみましょう！</p>
+  <div class="input-block2">
+    <label for="evacuationPlace2">具体的な避難先は？（浸水しない親せき・知人宅や指定避難所）</label><br>
+    <input type="text" id="evacuationPlace2" placeholder="避難先を入力">
+    <button onclick="checkEvacuation2()">確認した！</button>
+    <p id="evacuationWarning2" style="color:red; display:none;">決めていなくても、今考えてみましょう！</p>
   </div>
 </div>
 
@@ -404,33 +412,36 @@
 </div>
 
 <div class="page" id="page12">
-  <p><strong style="color:red;">大雨の際は、在宅避難してください。</strong></p>
+  <p><strong style="color:red;">大雨の際は、在宅避難してください。</strong></br>
+  そのためには、<span style="color:red;">最低限の備えが必要です。</p>
   <div class="input-block">
     <p>以下の備えはできていますか？</p>
-    <label><input type="checkbox" id="food2"> ３日分以上の食料（缶詰、レトルト食品、お菓子などでもよい）</label><br>
-    <label><input type="checkbox" id="water2"> 水（大人１人当たり１日３リットル）</label><br><br>
+    <label><input type="checkbox" id="food2"> <span style="font-weight:bold;">３日分以上の食料</span>（缶詰、レトルト食品、お菓子などでもよい）</label><br>
+    <label><input type="checkbox" id="water2"> <span style="font-weight:bold;">水</span>（大人１人当たり１日３リットル）</label><br><br>
     <button onclick="checkSupplies2()">確認</button>
     <p id="supplyResult2" style="margin-top:10px;"></p>
   </div>
 </div>
 
 <div class="page" id="page13">
-  <p><strong style="color:red;">大雨の際は、2階以上に避難してください。</strong></p>
+  <p><strong style="color:red;">大雨の際は、2階以上に避難してください。</strong></br>
+  そのためには、<span style="color:red;">最低限の備えが必要です。</p> 
   <div class="input-block">
     <p>以下の備えはできていますか？</p>
-    <label><input type="checkbox" id="food3"> ３日分以上の食料（缶詰、レトルト食品、お菓子などでもよい）</label><br>
-    <label><input type="checkbox" id="water3"> 水（大人１人当たり１日３リットル）</label><br><br>
+    <label><input type="checkbox" id="food3"> <span style="font-weight:bold;">３日分以上の食料</span>（缶詰、レトルト食品、お菓子などでもよい）</label><br>
+    <label><input type="checkbox" id="water3"> <span style="font-weight:bold;">水</span>（大人１人当たり１日３リットル）</label><br><br>
     <button onclick="checkSupplies3()">確認</button>
     <p id="supplyResult3" style="margin-top:10px;"></p>
   </div>
 </div>
 
 <div class="page" id="page14">
-  <p><strong style="color:red;">大雨の際は、3階以上に避難してください。</strong></p>
+  <p><strong style="color:red;">大雨の際は、3階以上に避難してください。</strong></br>
+  そのためには、<span style="color:red;">最低限の備えが必要です。</p> 
   <div class="input-block">
     <p>以下の備えはできていますか？</p>
-    <label><input type="checkbox" id="food4"> ３日分以上の食料（缶詰、レトルト食品、お菓子などでもよい）</label><br>
-    <label><input type="checkbox" id="water4"> 水（大人１人当たり１日３リットル）</label><br><br>
+    <label><input type="checkbox" id="food4"> <span style="font-weight:bold;">３日分以上の食料</span>（缶詰、レトルト食品、お菓子などでもよい）</label><br>
+    <label><input type="checkbox" id="water4"> <span style="font-weight:bold;">水</span>（大人１人当たり１日３リットル）</label><br><br>
     <button onclick="checkSupplies4()">確認</button>
     <p id="supplyResult4" style="margin-top:10px;"></p>
   </div>
@@ -470,11 +481,12 @@
 </div>
 
 <div class="page" id="page20">
-  <p><strong style="color:red;">大雨の際は、5階以上に避難してください。</strong></p>
+  <p><strong style="color:red;">大雨の際は、5階以上に避難してください。</strong></br>
+  そのためには、<span style="color:red;">最低限の備えが必要です。</p> 
   <div class="input-block">
     <p>以下の備えはできていますか？</p>
-    <label><input type="checkbox" id="food4"> ３日分以上の食料（缶詰、レトルト食品、お菓子などでもよい）</label><br>
-    <label><input type="checkbox" id="water4"> 水（大人１人当たり１日３リットル）</label><br><br>
+    <label><input type="checkbox" id="food4"> <span style="font-weight:bold;">３日分以上の食料</span>（缶詰、レトルト食品、お菓子などでもよい）</label><br>
+    <label><input type="checkbox" id="water4"> <span style="font-weight:bold;">水</span>（大人１人当たり１日３リットル）</label><br><br>
     <button onclick="checkSupplies4()">確認</button>
     <p id="supplyResult4" style="margin-top:10px;"></p>
   </div>
