@@ -29,7 +29,7 @@
     font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0D0116;
+    background-color: #f9f9f9;
   }
 
   .page {
@@ -114,49 +114,6 @@
     flex-direction: column;
     gap: 0.5em;
   }
-
-  /* 背景に画像を敷く */
-body {
-  background: url('ibi-s-saigai-suigai-4c.png') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Comic Sans MS', 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-/* ページ全体をカード風に */
-.page {
-  display: none;
-  padding: 2em;
-  max-width: 800px;
-  margin: 50px auto;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  border: 3px solid #90BCE4; 
-}
-
-.page.active {
-  display: block;
-}
-
-/* 見出しをカラフルに */
-h1 {
-  font-size: 2em;
-  color: #0d0116;
-  text-shadow: 1px 1px 0px #fff;
-  margin-bottom: 0.5em;
-}
-
-/* 質問部分を目立たせる */
-.question {
-  font-weight: bold;
-  font-size: 1.3em;
-  color: #444;
-  margin-bottom: 1em;
-}
-
 </style>
 </head>
 <script>
@@ -363,12 +320,8 @@ h1 {
 <div class="page" id="page7">
   <h1>自宅の浸水想定について</h1>
   <div class="image-option">
-    
     <p class="question">Q. あなたの家に想定されている浸水はどの程度ですか？</p> 
-
-    <div class="image-choice-container">
-    <img src="https://raw.githubusercontent.com/GUdsel/hazardrisk_check/main/浸水凡例.png" width="3" height="300">
-      
+    <img src="https://raw.githubusercontent.com/GUdsel/hazardrisk_check/main/浸水凡例.png" width="10" height="600">
     <div class="choice">
      <button style="background:#F285C9;" button onclick="nextPage(6)">10m以上</button2>
      <button style="background:#FF9190;" button onclick="nextPage(19)">5m以上10m未満</button>
