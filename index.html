@@ -114,6 +114,32 @@
     flex-direction: column;
     gap: 0.5em;
   }
+
+  /* 背景に画像を敷く */
+body {
+  background: url('ibi-s-saigai-suigai-4c.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ページ全体をカード風に */
+.page {
+  display: none;
+  padding: 2em;
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 3px solid #90BCE4;
+}
+
+.page.active {
+  display: block;
+}
 </style>
 </head>
 <script>
