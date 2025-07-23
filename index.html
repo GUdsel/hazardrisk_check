@@ -6,6 +6,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>災害リスク診断</title>
   <style>
+    /* 背景にグラデーション＋イラスト */
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fef6e4 0%, #fdf2f8 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* ページカード風 */
+.page {
+  display: none;
+  padding: 2em;
+  max-width: 800px;
+  margin: 2em auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease;
+}
+
+/* フェードイン */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 1.8em;
+  color: #ff6f61;
+  font-weight: 900;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+.question {
+  font-weight: bold;
+  color: #333;
+  background: #ffe7e0;
+  padding: 0.5em;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+/* ボタンをポップに */
+button {
+  padding: 0.8em 1.2em;
+  margin: 0.5em;
+  background-color: #ffb347;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background-color: #ff9966;
+  transform: translateY(-3px);
+}
+
     body { font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
     .page { display: none; padding: 20px; max-width: 800px; margin: auto; background: #fff; }
     .active { display: block; }
