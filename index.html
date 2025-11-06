@@ -249,9 +249,9 @@ body {
 <body>
 
 <div class="page active" id="page0">
-  <h1>風水害からの避難方法検討</h1>
+  <h1>風水害からの避難方法</h1>
   <p><span style="color:red; font-weight:bold; ">いくつかの質問に答えるだけで、</span><br>
-     <span style="color:red; font-weight:bold; ">自宅の水害リスクや避難行動をチェックできます。</span><br>
+     <span style="color:red; font-weight:bold; ">自宅の風水害のリスクや避難方法をチェックできます。</span><br>
      （リロードするとこの画面に戻ってこれます。押し間違いや他の条件でチェックしたい場合は、“⟳” を押してみてください。）</p>
   <div style="text-align: center; margin-top: 2em;">
     <button onclick="nextPage(1)" style="font-size: 1.4em; padding: 0.8em 2em;">はじめる</button>
@@ -396,17 +396,17 @@ body {
   <justify-content: space-between;">
     <div>
       <h3>戸建て</h3>
-      <button onclick="routeBasedOnResidence(10)">1階建て</button><br>
-      <button onclick="routeBasedOnResidence(15)">2階建て</button><br>
+      <button onclick="routeBasedOnResidence(15)">5階建て以上</button><br>
       <button onclick="routeBasedOnResidence(15)">3・4階建て</button><br>
-      <button onclick="routeBasedOnResidence(15)">5階建て以上</button>
+      <button onclick="routeBasedOnResidence(15)">2階建て</button><br>
+      <button onclick="routeBasedOnResidence(10)">1階建</button>
     </div>
     <div>
       <h3>集合住宅</h3>
-      <button onclick="routeBasedOnResidence(10)">1階</button><br>
-      <button onclick="routeBasedOnResidence(15)">2階</button><br>
+      <button onclick="routeBasedOnResidence(15)">5階以上</button><br>
       <button onclick="routeBasedOnResidence(15)">3・4階</button><br>
-      <button onclick="routeBasedOnResidence(15)">5階以上</button>
+      <button onclick="routeBasedOnResidence(15)">2階</button><br>
+      <button onclick="routeBasedOnResidence(10)">1階</button>
     </div>
   </div>
 </div>
@@ -552,6 +552,7 @@ body {
     <p id="supplyResult4" style="margin-top:10px;"></p>
   </div>
 </div>
+
 
 
 
